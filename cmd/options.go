@@ -46,7 +46,7 @@ func optionFlagSet() *pflag.FlagSet {
 	flags.SortFlags = false
 	flags.Int64P("vus", "u", 1, "number of virtual users")
 
-	//TODO: delete in a few versions
+	// TODO: delete in a few versions
 	flags.Int64P("max", "m", 0, "max available virtual users")
 	_ = flags.MarkDeprecated("max", "the global MaxVUs option is obsolete and doesn't affect the k6 script execution")
 
