@@ -307,7 +307,7 @@ func (scs ExecutorConfigMap) GetFullExecutionRequirements(executionSegment *Exec
 	}
 	for _, step := range trackedSteps {
 		// If the time offset is different, create a new step with the current values
-		if step.TimeOffset != currentTimeOffset {
+		if step.TimeOffset != currentTimeOffset || step.PlannedVUs == 0 {
 			addCurrentStepIfDifferent()
 			currentTimeOffset = step.TimeOffset
 		}
